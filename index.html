@@ -1,0 +1,251 @@
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Documentação Programação em C</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introdução">Introdução</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#O_Que_é_C?">O Que é C?</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#O_mais_simples_programa_em_C">O mais simples programa em C</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variáveis">Variáveis</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Printf">Printf</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introdução">
+            <header>Introdução</header>
+            <p>A linguagem C é uma linguagem de programação popular e amplamente utilizada para criar programas de
+                computador. Programadores no mundo todo utilizam a linguagem C, pois ela oferece o máximo controle e
+                eficácia. Se você é um programador, ou pretende se tornar um, eis alguns benefícios que você desfrutará
+                ao
+                aprender a linguagem C:</p>
+            <ul>
+                <li>
+                    você poderá ler e escrever código para diversas plataformas. Desde microcontroladores até sistemas
+                    científicos mais avançados podem ser criados em C e diversos sistemas operacionais modernos são
+                    escritos
+                    em C;
+                </li>
+                <li>
+                    o avanço para a linguagem C++ orientada para objeto torna-se muito mais fácil. A linguagem C++ é uma
+                    extensão de C e é praticamente impossível aprender C++ sem antes aprender C.
+                </li>
+            </ul>
+            <p>
+                Neste artigo, abordaremos toda a linguagem e mostraremos como se tornar um programador em C. Você ficará
+                espantado com tudo o que pode criar ao aprender a linguagem C.
+            </p>
+        </section>
+        <section class="main-section" id="O_Que_é_C?">
+            <header>O que é C?</header>
+            <p>
+                C é uma linguagem de programação de computadores. Isso significa que você pode usá-la para criar listas
+                de
+                instruções para um computador seguir. A linguagem C é uma das milhares de linguagens de programação
+                atualmente em uso. Existe há várias décadas e ganhou ampla aceitação por oferecer aos programadores o
+                máximo
+                em controle e eficiência. A linguagem C é fácil de aprender: pode ter um estilo um tanto criptográfico
+                comparada às outras linguagens, mas isso é logo superado.
+            </p>
+            <p>
+                A linguagem C é o que se chama de linguagem compilada. Isso significa que, uma vez escrito o programa em
+                C,
+                ele deve ser passado por um compilador para transformar seu programa em executável para o computador
+                rodar
+                (executar). Um programa em C possui um formato legível ao homem, enquanto o executável gerado no
+                compilador
+                possui a forma legível para a máquina e é executada por ela. Isto significa que para escrever e executar
+                um
+                programa em C, você precisa ter acesso a um compilador de C. Se estiver usando uma máquina UNIX (por
+                exemplo, escrevendo scripts CGI em C no seu computador UNIX, ou se você é um estudante que trabalha em
+                uma
+                máquina UNIX de um laboratório), o compilador de C está disponível gratuitamente. Ele é chamado "cc" ou
+                "gcc" e está disponível na linha de comando. Se você é um aluno, estão a escola lhe fornecerá um
+                compilador
+                (descubra qual a escola usa e aprenda mais sobre ele). Se estiver trabalhando em casa em uma máquina
+                Windows, você precisará fazer o download de um compilador de C gratuito ou comprar um compilador
+                comercial.
+                Um compilador comercial amplamente utilizado é o ambiente Visual C++ da Microsoft (ele compila programas
+                em
+                C e C++). Mas, infelizmente, este programa custa caro. Caso não disponha de algumas centenas de dólares
+                para
+                gastar em um compilador comercial, você pode usar um dos compiladores gratuitos disponíveis na internet.
+                Veja
+                <a target="_blank" href="http://delorie.com/djgpp/">http://delorie.com/djgpp/ (em inglês)</a> como ponto
+                de
+                partida em sua pesquisa.
+
+                Vamos começar com um programa em C bastante simples e progredir a partir dele. Vamos supor que você
+                usará a
+                linha de comando UNIX e o gcc como seu ambiente para estes exemplos, mas caso contrário, todos os
+                códigos
+                também funcionarão (basta compreender e usar o compilador que tiver disponível).
+
+                Vamos começar!
+            </p>
+        </section>
+        <section class="main-section" id="O_mais_simples_programa_em_C">
+            <header>O mais simples programa em C</header>
+            <p>
+                Vamos começar com o programa em C mais simples possível e usá-lo tanto para entender os fundamentos da
+                linguagem C como o processo de compilação em C. Digite o programa seguinte em um editor de textos padrão
+                (vi
+                ou emacs no UNIX, Bloco de notas no Windows ou TeachText no Macintosh). Depois salve o programa em um
+                arquivo denominado samp.c. Se deixar de incluir .c, você provavelmente receberá informação de algum tipo
+                de
+                erro ao compilá-lo (portanto, não se esqueça de inserir o .c). Certifique-se também de que o editor não
+                anexe automaticamente caracteres extras (como .txt) ao nome do arquivo. Eis o primeiro programa:
+            </p>
+            <code>
+          #include &ltstdio.h&gt
+    
+          int main()
+          {
+          printf("Este é o resultado do meu primeiro program!\n");
+          return 0;
+          }
+        </code>
+            <p>
+                Quando executado, este programa instrui o computador a imprimir a linha: "Este é o resultado do meu
+                primeiro
+                programa!", e depois encerra o programa.
+            </p>
+            <p>
+                Para compilar este código, siga estas etapas:
+            </p>
+            <ul>
+                <li>
+                    Em uma máquina UNIX, digite <strong>gcc samp.c -o samp</strong> (se gcc não funcionar, tente cc).
+                    Esta
+                    linha executa o compilador em C chamado gcc, pede que compile samp.c e que nomeie o arquivo
+                    executável
+                    criado como <strong>samp.</strong> Para executar o programa, digite <strong>samp</strong> (ou em
+                    algumas
+                    máquinas UNIX, <strong>./samp</strong>).
+                </li>
+                <li>
+                    Em uma máquina rodando DOS ou Windows e usando <a target="_blank"
+                        href="http://www.delorie.com/djgpp/">
+                        DJGPP (em inglês)</a>, digite o seguinte no prompt do MS-DOS: <strong>gcc samp.c -o
+                        samp.exe</strong>. Esta linha executa o compilador em C chamado gcc, Pede que compile samp.c e
+                    que
+                    nomeie o arquivo executável criado como <strong>samp.exe</strong>. Para executar o programa, digite
+                    <strong>samp</strong>.
+                </li>
+                <li>
+                    Se estiver trabalhando com algum outro compilador ou sistema de desenvolvimento, leia e siga as
+                    instruções dele para compilar e executar o programa.
+                </li>
+            </ul>
+            <p>
+                Você verá "Este é o resultado do meu primeiro programa!" ao executá-lo. Veja o que aconteceu ao compilar
+                o
+                programa:
+            <div id="img">
+                <img src="http://web.archive.org/web/20120111115843im_/http://static.hsw.com.br/gif/c-compile.gif"
+                    alt="imagem de um fluxograma mostrando a compilação" </img>
+            </div>
+            Caso tenha cometido um erro de digitação no programa, ele não compilará ou não poderá ser executado. Se o
+            programa não foi compilado ou não executa corretamente, edite-o e localize os erros de digitação. Corrija o
+            erro
+            e tente novamente.
+            </p>
+        </section>
+        <section class="main-section" id="Variáveis">
+            <header>Variáveis</header>
+            <p>
+                Como programador, você com freqüência desejará que seu programa se "lembre" de um valor. Por exemplo, se
+                seu
+                programa solicita um valor do usuário, ou se ele calcula um valor, você vai querer armazená-lo em algum
+                lugar para usá-lo mais tarde. O modo como seu programa se lembra das coisas é por meio do uso de
+                <strong>variáveis.</strong> Por exemplo:
+            </p>
+            <code>
+          int b;
+        </code>
+            <p>
+                Esta linha diz: "Quero criar um espaço chamado b que possa conter um valor inteiro". Uma variável tem um
+                nome (neste caso, b) e um tipo (neste caso, int, um inteiro). Você pode armazenar um valor em b
+                escrevendo
+                algo assim:
+            </p>
+            <code>
+          b = 5;
+        </code>
+            <p>
+                Você pode usar o valor em b escrevendo algo assim:
+            </p>
+            <code>
+          printf("%d", b);
+        </code>
+            <p>
+                Na linguagem C, há vários tipos padrões de variáveis:
+            </p>
+            <ul>
+                <li>
+                    int - valores inteiros (número inteiro)
+                </li>
+                <li>
+                    float - valores de ponto flutuante
+                </li>
+                <li>
+                    char - valores de caractere único (como "m" ou "Z")
+                </li>
+            </ul>
+
+        </section>
+        <section class="main-section" id="Printf">
+            <header>Printf</header>
+            <p>
+                A instrução printf permite enviar o resultado para a saída padrão. Para nós, o termo "saída padrão" se
+                refere à tela (embora você possa redirecionar a saída padrão para um arquivo de texto ou outro comando).
+                Eis outro programa que o ajudará a aprender mais sobre printf:
+            </p>
+            <code>
+          #include &ltstdio.h&gt
+    
+          int main( )
+          {
+          int a, b, c;
+          a = 5;
+          b = 7;
+          c = a + b;
+          printf("%d + %d = %d\n", a, b, c);
+          return 0;
+          }
+        </code>
+        </section>
+    </main>
+
+</body>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
